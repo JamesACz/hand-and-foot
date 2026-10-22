@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: hand-and-foot
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false   # Render asks for this: paste your Neon connection string
+      - key: NODE_VERSION
+        value: "22"

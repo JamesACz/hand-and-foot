@@ -1,0 +1,23 @@
+{
+  "name": "hand-and-foot",
+  "version": "1.6.0",
+  "description": "Online Hand and Foot (Canasta variant) for 4 players with chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/sim.js 100 && node test/overflow-test.js && node test/pg-test.js && node test/socket-test.js && node test/persist-test.js && node test/push-test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.23.1",
+    "socket.io": "^4.8.1",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "pg-mem": "^3.0.14",
+    "socket.io-client": "^4.8.1"
+  }
+}
